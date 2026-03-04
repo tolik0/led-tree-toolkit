@@ -1,0 +1,31 @@
+menu "LED Controller"
+
+config LED_WIFI_SSID
+    string "WiFi SSID"
+    default ""
+
+config LED_WIFI_PASSWORD
+    string "WiFi Password"
+    default ""
+
+config LED_STRIP_GPIO
+    int "LED strip GPIO"
+    default 18
+
+config LED_STRIP_LED_NUM
+    int "LED count"
+    default 400
+
+choice LED_STRIP_PIXEL_FORMAT
+    prompt "LED pixel format"
+    default LED_STRIP_PIXEL_FORMAT_GRB
+
+config LED_STRIP_PIXEL_FORMAT_GRB
+    bool "GRB (WS281x default)"
+
+config LED_STRIP_PIXEL_FORMAT_RGB
+    bool "RGB"
+
+endchoice
+
+endmenu

@@ -1,0 +1,19 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [
+  "esp",
+  ".venv",
+  "myvenv",
+  "scanning/captures",
+  "scanning/outputs",
+  "firmware/firmware_esp32c6_ws2811/build",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
